@@ -2,3 +2,48 @@ site_name: SID's Wiki
 
 theme:
   name: material
+  custom_dir: overrides
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  language: en
+  direction: ltr
+  features:
+    - navigation.instant
+    - navigation.tabs
+    # - navigation.sections
+    # - navigation.expand
+    - navigation.top
+
+extra_css:
+  - assets/stylesheets/basic.css
+  - assets/stylesheets/progressbar.css
+
+plugins:
+  - awesome-pages:
+      filename: .index
+  - macros
+  - git-revision-date
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+
+markdown_extensions:
+  - toc:
+      permalink: True
+      toc_depth: 3
+  - pymdownx.highlight:
+      use_pygments: True
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+  - pymdownx.progressbar
+  - markdown.extensions.meta
+  - markdown.extensions.attr_list
+      # available_metadata:
+      # - hide_footer_nav: true or false
+      # - title: title used in navigation
