@@ -1,6 +1,6 @@
 ---
 hide:
-  - toc
+  # - toc
 ---
 # Welcome
 
@@ -8,4 +8,4 @@ It's just frustrating that search online for repeated questions over and over ag
 
 ## Overall Progress
 
-[=0% "0%"]{: .progress-60plus .progress-ba}
+[=0% "0%"]{: .progress-60plus .progress-bar}

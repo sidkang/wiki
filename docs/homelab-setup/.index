@@ -1,4 +1,6 @@
 nav:
   - Welcome: welcome.md
   - overview
+  - Tech Usage: tech-usage.md
   - storage
+  - Resource: resource.md

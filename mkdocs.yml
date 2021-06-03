@@ -29,8 +29,14 @@ plugins:
   - macros
   - git-revision-date
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: false
       type: date
+
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/sidkang
+      name: SidKang
 
 markdown_extensions:
   - toc:
@@ -47,3 +53,7 @@ markdown_extensions:
       # available_metadata:
       # - hide_footer_nav: true or false
       # - title: title used in navigation
+
+google_analytics:
+  - G-LF5BSQQL1K
+  - auto
