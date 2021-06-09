@@ -26,11 +26,11 @@ extra_css:
 plugins:
   - awesome-pages:
       filename: .index
-  - macros
   - git-revision-date
   - git-revision-date-localized:
       enable_creation_date: false
       type: date
+  - macros
 
 extra:
   social:

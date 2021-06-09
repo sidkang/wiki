@@ -1,0 +1,3 @@
+nav:
+  - Basic Setup: basic.md
+  - Share Via ZFS: share-via-zfs.md
