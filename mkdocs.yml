@@ -53,7 +53,3 @@ markdown_extensions:
       # available_metadata:
       # - hide_footer_nav: true or false
       # - title: title used in navigation
-
-google_analytics:
-  - G-LF5BSQQL1K
-  - auto
