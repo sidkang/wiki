@@ -5,3 +5,4 @@
 ```shell
 compaudit | xargs chmod g-w
 ```
+
