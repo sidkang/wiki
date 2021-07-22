@@ -2,3 +2,4 @@ nav:
   - Home: index.md
   - My Homelab Setup: homelab-setup
   - Python: python
+  - Workout: workout
