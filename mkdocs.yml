@@ -18,6 +18,7 @@ theme:
     - navigation.tabs
     # - navigation.sections
     # - navigation.expand
+    # - header.autohide
     - navigation.top
 
 extra_css:
@@ -46,6 +47,9 @@ markdown_extensions:
       use_pygments: True
   - pymdownx.superfences
   - pymdownx.inlinehilite
+
+  - pymdownx.magiclink
+  - pymdownx.saneheaders
 
   - pymdownx.progressbar
   - markdown.extensions.meta

@@ -2,5 +2,6 @@ nav:
   - Welcome: welcome.md
   - overview
   - Tech Usage: tech-usage.md
+  - Networking: networking.md
   - storage
   - Resource: resource.md
