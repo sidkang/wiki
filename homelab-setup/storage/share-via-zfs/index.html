@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://wiki.sidkang.com/homelab-setup/storage/share-via-zfs/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2, mkdocs-material-7.1.7">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fe914879.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ba0d045b.min.css">
         
           
           
@@ -48,6 +48,8 @@
     
     
       
+
+
     
     
   </head>
@@ -312,6 +314,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../networking/" class="md-nav__link">
+        Networking
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -319,14 +333,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
       
-      <label class="md-nav__link" for="__nav_2_4">
+      <label class="md-nav__link" for="__nav_2_5">
         Storage
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Storage" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_4">
+        <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           Storage
         </label>
@@ -386,25 +400,12 @@
     NFS
   </a>
   
-    <nav class="md-nav" aria-label="NFS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simple-usage" class="md-nav__link">
-    Simple Usage
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-example" class="md-nav__link">
-    Advanced Example
+      
+        <li class="md-nav__item">
+  <a href="#smb" class="md-nav__link">
+    SMB
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -510,6 +511,45 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Pywin32
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pywin32" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pywin32
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/pywin32/main/" class="md-nav__link">
+        Pywin32 Snippets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -546,25 +586,12 @@
     NFS
   </a>
   
-    <nav class="md-nav" aria-label="NFS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simple-usage" class="md-nav__link">
-    Simple Usage
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-example" class="md-nav__link">
-    Advanced Example
+      
+        <li class="md-nav__item">
+  <a href="#smb" class="md-nav__link">
+    SMB
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -590,16 +617,26 @@
                 
                 <h1 id="share-zfs-datasets-via-nfssmb">Share ZFS Datasets Via NFS/SMB<a class="headerlink" href="#share-zfs-datasets-via-nfssmb" title="Permanent link">&para;</a></h1>
 <h2 id="nfs">NFS<a class="headerlink" href="#nfs" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>sudo apt-get install -y nfs-kernel-server
+<div class="highlight"><pre><span></span><code><span class="c1"># Install nfs server</span>
+sudo apt-get install -y nfs-kernel-server
+
+<span class="c1"># Simple Usage</span>
+zfs <span class="nb">set</span> <span class="nv">sharenfs</span><span class="o">=</span>on zfs-pool/dataset-tank
 </code></pre></div>
-<h3 id="simple-usage">Simple Usage<a class="headerlink" href="#simple-usage" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>zfs <span class="nb">set</span> <span class="nv">sharenfs</span><span class="o">=</span>on zfs-pool/dataset-tank
-</code></pre></div>
-<h3 id="advanced-example">Advanced Example<a class="headerlink" href="#advanced-example" title="Permanent link">&para;</a></h3>
-<p>To give different options per IP</p>
-<div class="highlight"><pre><span></span><code>zfs <span class="nb">set</span> <span class="nv">sharenfs</span><span class="o">=</span><span class="s2">&quot;root_squash,rw=192.168.1.216,ro=192.168.1.0/24&quot;</span> zfs-pool/dataset-tank
+<h5 id="advanced-example">Advanced Example<a class="headerlink" href="#advanced-example" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using NFSv3, you can add UID &amp; GID setting to the sharenfs command.</span>
+zfs <span class="nb">set</span> <span class="nv">sharenfs</span><span class="o">=</span><span class="s2">&quot;async,anonuid=</span><span class="nv">$UID</span><span class="s2">,anongid=</span><span class="nv">$GID</span><span class="s2">,rw=192.168.18.0/24&quot;</span> zfs-pool/dataset-tank
+<span class="c1"># To give different options per IP.</span>
+zfs <span class="nb">set</span> <span class="nv">sharenfs</span><span class="o">=</span><span class="s2">&quot;root_squash,rw=192.168.1.216,ro=192.168.1.0/24&quot;</span> zfs-pool/dataset-tank
+
+<span class="c1"># BAD EXAMPLE</span>
+zfs <span class="nb">set</span> <span class="nv">sharenfs</span><span class="o">=</span><span class="s2">&quot;root_squash,rw=192.168.1.216,all_squash,ro=192.168.1.0/24&quot;</span> zfs-pool/dataset-tank
+<span class="c1">### the `all_squash` param in the example above takes no effects.</span>
 </code></pre></div>
 <p>@ symbol is only useful when using partial ip addresses. In other words, <code>192.168.1.0/24</code> and <code>@192.168.1</code> are equivalent.</p>
+<h2 id="smb">SMB<a class="headerlink" href="#smb" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>apt-get install -y samba
+</code></pre></div>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <p><a href="https://docs.oracle.com/cd/E23824_01/html/821-1448/gayne.html#NewZFSSharingSyntaxhttps://docs.oracle.com/cd/E23824_01/html/821-1448/gayne.html">Oracle ZFS Sharing</a></p>
 <p><a href="https://github.com/openzfs/zfs/issues/3860">Sharenfs Option Issue</a></p>
@@ -611,7 +648,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 22, 2021</span>
       
     
   </small>
@@ -628,8 +665,9 @@
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -681,10 +719,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>
