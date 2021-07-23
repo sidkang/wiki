@@ -1,3 +1,5 @@
 nav:
   - Welcome: welcome.md
+  - Status: status.md
   - My Journey: journey
+  - Food: foods.md
