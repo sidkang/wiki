@@ -62,6 +62,7 @@ Banded Pallof Press|7,7,6|目前12.5kg ing，下周再继续+2.5kg
 ### 2021/7/27
 
 首次做出一个标准的引体向上，赞～
+今天也第一次加上了handstand的progression，有点难+危险，需要仔细查查攻略
 
 ## Skill Reference
 
