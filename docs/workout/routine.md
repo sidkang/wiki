@@ -44,7 +44,7 @@ ID|WORKOUT|TYPE|REP|NOTE
 Pair 1|Scapular Pulls||7,7,7|动作可能还需要再看看，目前还不是太标准
 |Squat||6,6,6|周一周五用杠铃(20kg ing，每周+5kg)，周三采用bodyweight
 |
-Pair 2|Dip|45s,45s,45s||每周+5s，直到60s
+Pair 2|Dip||45s,45s,45s|每周+5s，直到60s
 |Hinge||6,6,6|暂时全部使用deadlift替代（30kg）,熟悉动作ing，暂时准备每周+5kg
 |
 Pair 3|Incline Row||6,6,6|杠铃架第7格，下周应该可以到7,7,7
@@ -61,8 +61,9 @@ Banded Pallof Press||7,7,6|目前12.5kg ing，下周再继续+2.5kg
 
 ### 2021/7/27
 
-首次做出一个标准的引体向上，赞～
-今天也第一次加上了handstand的progression，有点难+危险，需要仔细查查攻略
+首次做出一个标准的引体向上，赞～;
+
+另外今天也第一次加上了handstand的progression，有点难+危险，需要再查下攻略
 
 ## Skill Reference
 
