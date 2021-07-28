@@ -44,18 +44,18 @@ ID|WORKOUT|TYPE|REP|NOTE
 Pair 1|Scapular Pulls||7,7,7|动作可能还需要再看看，目前还不是太标准
 |Squat||6,6,6|周一周五用杠铃(20kg ing，每周+5kg)，周三采用bodyweight
 |
-Pair 2|Dip|45s,45s,45s|每周+5s，直到60s
-|Hinge||暂时全部使用deadlift替代（30kg）,熟悉动作ing，暂时准备每周+5kg
+Pair 2|Dip|45s,45s,45s||每周+5s，直到60s
+|Hinge||6,6,6|暂时全部使用deadlift替代（30kg）,熟悉动作ing，暂时准备每周+5kg
 |
-Pair 3|Incline Row|6,6,6|杠铃架第7格
-|Incline Push-Up|7,7,7|杠铃架第5格，下周可以8,8,8，然后应该可以换标准俯卧撑了
+Pair 3|Incline Row||6,6,6|杠铃架第7格，下周应该可以到7,7,7
+|Incline Push-Up||7,7,7|杠铃架第5格，下周可以8,8,8，然后应该可以换标准俯卧撑了
 
 ### Core Work
 
 WORKOUT|TYPE|REP|NOTE
 -|-|-|-
-Plank|35s,35s,35s|下一周+5s到40s，然后下下周进步到下个动作
-Banded Pallof Press|7,7,6|目前12.5kg ing，下周再继续+2.5kg
+Plank||35s,35s,35s|下一周+5s到40s，然后下下周进步到下个动作
+Banded Pallof Press||7,7,6|目前12.5kg ing，下周再继续+2.5kg
 
 ## Thoughts
 
