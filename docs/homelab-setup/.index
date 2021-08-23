@@ -4,4 +4,5 @@ nav:
   - Tech Usage: tech-usage.md
   - Networking: networking.md
   - storage
+  - Services: service
   - Resource: resource.md

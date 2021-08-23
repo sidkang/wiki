@@ -1,5 +1,7 @@
 nav:
   - Welcome: welcome.md
+  - Progression: progression.md
   - Routine: routine.md
+  - Technique: technique
   - My Journey: journey
   - Food: foods.md

@@ -1,3 +1,0 @@
-# Materials
-
-[Overcoming Gravity]()
