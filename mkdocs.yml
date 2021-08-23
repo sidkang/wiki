@@ -27,6 +27,7 @@ theme:
 extra_css:
   - assets/stylesheets/basic.css
   - assets/stylesheets/progressbar.css
+  - assets/stylesheets/utterances.css
 
 plugins:
   - awesome-pages:
