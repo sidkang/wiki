@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://wiki.sidkang.com/python/pandas/main/" rel="canonical"/>
+<link href="https://wiki.sidkang.com/homelab-setup/service/200-essential/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-7.2.4" name="generator"/>
-<title>Inbox - SID's Wiki</title>
+<title>200-Essential - SID's Wiki</title>
 <link href="../../../assets/stylesheets/main.f7f47774.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <meta content="#4051b5" name="theme-color"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#inbox">
+<a class="md-skip" href="#essential">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Inbox
+              200-Essential
             
           </span>
 </div>
@@ -97,12 +97,12 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../homelab-setup/welcome/">
+<a class="md-tabs__link md-tabs__link--active" href="../../welcome/">
         My Homelab Setup
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="./">
+<a class="md-tabs__link" href="../../../python/pandas/main/">
         Python
       </a>
 </li>
@@ -132,8 +132,8 @@
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2">
         My Homelab Setup
         <span class="md-nav__icon md-icon"></span>
@@ -145,7 +145,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/welcome/">
+<a class="md-nav__link" href="../../welcome/">
         Welcome
       </a>
 </li>
@@ -162,7 +162,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/overview/new/">
+<a class="md-nav__link" href="../../overview/new/">
         New
       </a>
 </li>
@@ -170,12 +170,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/tech-usage/">
+<a class="md-nav__link" href="../../tech-usage/">
         Tech Usage
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/networking/">
+<a class="md-nav__link" href="../../networking/">
         Networking
       </a>
 </li>
@@ -192,20 +192,20 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/storage/basic/">
+<a class="md-nav__link" href="../../storage/basic/">
         Basic Setup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/storage/share-via-zfs/">
+<a class="md-nav__link" href="../../storage/share-via-zfs/">
         Share Via ZFS
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_6">
         Services
         <span class="md-nav__icon md-icon"></span>
@@ -216,28 +216,56 @@
           Services
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/service/200-essential/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          200-Essential
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         200-Essential
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#services">
+    Services
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/service/201-webdav/">
+<a class="md-nav__link" href="#requirements">
+    Requirements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-script">
+    Config Script
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../201-webdav/">
         201-Webdav
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/service/202-syncthing/">
+<a class="md-nav__link" href="../202-syncthing/">
         202-Syncthing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/service/203-qbittorrent/">
+<a class="md-nav__link" href="../203-qbittorrent/">
         203-Qbittorrent
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/service/204-plex/">
+<a class="md-nav__link" href="../204-plex/">
         204-Plex
       </a>
 </li>
@@ -245,15 +273,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../homelab-setup/resource/">
+<a class="md-nav__link" href="../../resource/">
         Resource
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3">
         Python
         <span class="md-nav__icon md-icon"></span>
@@ -264,8 +292,8 @@
           Python
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_1">
         Pandas
         <span class="md-nav__icon md-icon"></span>
@@ -276,9 +304,8 @@
           Pandas
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../python/pandas/main/">
         Inbox
       </a>
 </li>
@@ -298,7 +325,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pywin32/main/">
+<a class="md-nav__link" href="../../../python/pywin32/main/">
         Pywin32 Snippets
       </a>
 </li>
@@ -407,18 +434,167 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#services">
+    Services
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+    Requirements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-script">
+    Config Script
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="inbox">Inbox<a class="headerlink" href="#inbox" title="Permanent link">¶</a></h1>
+<h1 id="essential">Essential<a class="headerlink" href="#essential" title="Permanent link">¶</a></h1>
+<h2 id="services">Services<a class="headerlink" href="#services" title="Permanent link">¶</a></h2>
+<ol>
+<li>Wildcard Cert issuement with ACME.SH via CF</li>
+<li>Gost Proxy for Back Home Tunnel Service</li>
+</ol>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
+<ol>
+<li>Copy public ssh key to pve host with name 'id_rsa_new.pub'</li>
+<li>Forward a port from WAN to 192.168.18.LXC_ID:8392</li>
+</ol>
+<h2 id="config-script">Config Script<a class="headerlink" href="#config-script" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">####################### VARIABLES</span>
+
+<span class="nv">LXC_TEMPLATE</span><span class="o">=</span>debian-10-standard_10.7-1_amd64.tar.gz
+<span class="nv">LXC_OS_TYPE</span><span class="o">=</span>debian
+<span class="nv">LXC_HOSTNAME</span><span class="o">=</span>essential
+<span class="nv">LXC_ID</span><span class="o">=</span><span class="m">200</span>
+<span class="nv">LXC_CPU_CORE</span><span class="o">=</span><span class="m">2</span>
+<span class="nv">LXC_MEMORY</span><span class="o">=</span><span class="m">512</span>
+<span class="nv">LXC_SWAP</span><span class="o">=</span><span class="m">256</span>
+
+<span class="nv">DOMAIN</span><span class="o">=</span>domain.com
+<span class="nv">PROXY_ID</span><span class="o">=</span><span class="m">240</span>
+<span class="nv">PROXY_DNS</span><span class="o">=</span><span class="m">198</span>.18.0.2
+<span class="nv">SS_PASSWORD</span><span class="o">=</span>asdfjklqwer-ourUHBeren_rejHDUEND-euejdne_YEHEBDUenhe29137EYEHDy48226hdbey782378
+
+
+<span class="c1">#######################</span>
+
+pct create <span class="nv">$LXC_ID</span> store-image:vztmpl/debian-10-standard_10.7-1_amd64.tar.gz <span class="se">\</span>
+    --unprivileged <span class="m">1</span> <span class="se">\</span>
+    --hostname <span class="nv">$LXC_HOSTNAME</span> <span class="se">\</span>
+    --ssh-public-keys ~/.ssh/id_rsa_new.pub <span class="se">\</span>
+    --rootfs spool-vm:16 <span class="se">\</span>
+    --ostype <span class="nv">$LXC_OS_TYPE</span> <span class="se">\</span>
+    --arch amd64 <span class="se">\</span>
+    --cores <span class="nv">$LXC_CPU_CORE</span> <span class="se">\</span>
+    --cpulimit <span class="m">0</span> <span class="se">\</span>
+    --cpuunits <span class="m">1024</span> <span class="se">\</span>
+    --memory <span class="nv">$LXC_MEMORY</span> <span class="se">\</span>
+    --swap <span class="nv">$LXC_SWAP</span> <span class="se">\</span>
+    --net0 <span class="nv">name</span><span class="o">=</span>eth0,bridge<span class="o">=</span>vmbr0,firewall<span class="o">=</span><span class="m">0</span>,gw<span class="o">=</span><span class="m">192</span>.168.18.<span class="nv">$PROXY_ID</span>,ip<span class="o">=</span><span class="m">192</span>.168.18.<span class="nv">$LXC_ID</span>/24,type<span class="o">=</span>veth <span class="se">\</span>
+    --nameserver <span class="nv">$PROXY_DNS</span> <span class="se">\</span>
+    --onboot <span class="m">1</span> <span class="se">\</span>
+    --startup <span class="nv">order</span><span class="o">=</span><span class="m">1</span>
+
+pct <span class="nb">set</span> <span class="nv">$LXC_ID</span> -mp1 /store/software/config/homelab/cert,mp<span class="o">=</span>/mnt/acme
+<span class="nb">echo</span> -e <span class="s2">"</span>
+<span class="s2">lxc.idmap = u 0 100000 1801</span>
+<span class="s2">lxc.idmap = g 0 100000 1801</span>
+<span class="s2">lxc.idmap = u 1801 1801 3</span>
+<span class="s2">lxc.idmap = g 1801 1801 3</span>
+<span class="s2">lxc.idmap = u 1804 101804 63732</span>
+<span class="s2">lxc.idmap = g 1804 101804 63732</span>
+<span class="s2">"</span> &gt;&gt; /etc/pve/lxc/<span class="nv">$LXC_ID</span>.conf
+
+<span class="c1">####################### Boot, upgrade, UID &amp; GID</span>
+
+pct start <span class="nv">$LXC_ID</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- bash -c <span class="s2">"echo 'Preconfig' &amp;&amp;\</span>
+<span class="s2">    sed -i 's|http://ftp.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian/|g' /etc/apt/sources.list &amp;&amp;\</span>
+<span class="s2">    sed -i 's|http://security.debian.org|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g' /etc/apt/sources.list &amp;&amp;\</span>
+<span class="s2">    apt update -y &amp;&amp;\</span>
+<span class="s2">    apt upgrade -y --no-install-recommends &amp;&amp;\</span>
+<span class="s2">    apt install -y sudo curl git &amp;&amp;\</span>
+<span class="s2">    rm -rf /etc/localtime &amp;&amp;\</span>
+<span class="s2">    ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp;\</span>
+<span class="s2">    echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/environment &gt; /dev/null &amp;&amp;\</span>
+<span class="s2">    echo 'en_US.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen &gt; /dev/null &amp;&amp;\</span>
+<span class="s2">    echo 'LANG=en_US.UTF-8' | sudo tee /etc/locale.conf &gt; /dev/null &amp;&amp;\</span>
+<span class="s2">    sudo locale-gen en_US.UTF-8"</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- bash -c <span class="s2">"echo &amp;&amp;\</span>
+<span class="s2">    groupadd -g 1801 mediagroup &amp;&amp;\</span>
+<span class="s2">    groupadd -g 1802 labgroup &amp;&amp;\</span>
+<span class="s2">    useradd -m -d /home/thunder -u 1802 -g labgroup -G mediagroup -s /bin/bash thunder &amp;&amp;\</span>
+<span class="s2">    sudo -u thunder bash -c 'whoami' &amp;&amp;\</span>
+<span class="s2">    echo 'Preconfig done.'"</span>
+
+<span class="c1">####################### Gost Configuration</span>
+
+<span class="nv">GOST_SYSTEMD_CONFIG</span> <span class="o">=</span><span class="k">$(</span>cat <span class="s">&lt;&lt;EOF</span>
+<span class="s">[Unit]</span>
+<span class="s">Description=Gost Proxy</span>
+<span class="s">After=network.target</span>
+<span class="s">Wants=network.target</span>
+
+<span class="s">[Service]</span>
+<span class="s">Type=simple</span>
+<span class="s">StandardError=journal</span>
+<span class="s">User=thunder</span>
+<span class="s">ExecStart=/usr/local/bin/gost -L=ss+otls://aes-256-gcm:$SS_PASSWORD@:8392</span>
+<span class="s">Restart=always</span>
+
+<span class="s">[Install]</span>
+<span class="s">WantedBy=multi-user.target</span>
+<span class="s">EOF</span>
+<span class="k">)</span>
+
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- cat -e <span class="nv">$GOST_SYSTEMD_CONFIG</span> &gt;&gt; /etc/systemd/system/gost.service
+
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- wget https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64-2.11.1.gz
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- gzip -d gost-linux-amd64-2.11.1.gz
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- mv gost-linux-amd64-2.11.1 /usr/local/bin/gost
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- chmod +x /usr/local/bin/gost
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- systemctl <span class="nb">enable</span> gost.service
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- systemctl start gost.service
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sysctl -w net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sysctl -p
+
+<span class="c1">####################### ACME.SH WildCard SSL Cert Configuration</span>
+
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo --login -u thunder bash -ilc <span class="s2">"cd ~ &amp;&amp;\</span>
+<span class="s2">    git clone https://github.com/acmesh-official/acme.sh.git &amp;&amp;\</span>
+<span class="s2">    cd ./acme.sh &amp;&amp;\</span>
+<span class="s2">    ./acme.sh --install -m sidskang@gmail.com"</span>
+
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo -u thunder bash -c <span class="s1">'~/.acme.sh/acme.sh --home /mnt/acme --upgrade --auto-upgrade'</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo -u thunder bash -c <span class="s1">'~/.acme.sh/acme.sh --home /mnt/acme --issue --dns dns_cf -d "*.$DOMAIN"'</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo -u thunder bash -c <span class="s1">'~/.acme.sh/acme.sh --home /mnt/acme --toPkcs -d "*.$DOMAIN" --password pkcs_password'</span>
+
+<span class="c1">####################### Cleanup</span>
+
+pct <span class="nb">set</span> <span class="nv">$LXC_ID</span> -net0 <span class="nv">name</span><span class="o">=</span>eth0,bridge<span class="o">=</span>vmbr0,firewall<span class="o">=</span><span class="m">0</span>,gw<span class="o">=</span><span class="m">192</span>.168.18.1,ip<span class="o">=</span><span class="m">192</span>.168.18.<span class="nv">$LXC_ID</span>/24,type<span class="o">=</span>veth
+pct <span class="nb">set</span> <span class="nv">$LXC_ID</span> -nameserver <span class="m">192</span>.168.18.1
+pct reboot <span class="nv">$LXC_ID</span>
+</code></pre></div>
 <hr/>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 23, 2021</span>
 </small>
 </div>
 </article>
@@ -431,7 +607,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Resource" class="md-footer__link md-footer__link--prev" href="../../../homelab-setup/resource/" rel="prev">
+<a aria-label="Previous: Share Via ZFS" class="md-footer__link md-footer__link--prev" href="../../storage/share-via-zfs/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -440,17 +616,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Resource
+              Share Via ZFS
             </div>
 </div>
 </a>
-<a aria-label="Next: Pywin32 Snippets" class="md-footer__link md-footer__link--next" href="../../pywin32/main/" rel="next">
+<a aria-label="Next: 201-Webdav" class="md-footer__link md-footer__link--next" href="../201-webdav/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Pywin32 Snippets
+              201-Webdav
             </div>
 </div>
 <div class="md-footer__button md-icon">
