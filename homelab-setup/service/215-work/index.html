@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://wiki.sidkang.com/homelab-setup/service/210-docker-server/" rel="canonical"/>
+<link href="https://wiki.sidkang.com/homelab-setup/service/215-work/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-7.2.4" name="generator"/>
-<title>Docker - SID's Wiki</title>
+<title>Win-Workstation - SID's Wiki</title>
 <link href="../../../assets/stylesheets/main.f7f47774.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <meta content="#4051b5" name="theme-color"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#docker">
+<a class="md-skip" href="#win-workstation">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Docker
+              Win-Workstation
             
           </span>
 </div>
@@ -417,6 +417,21 @@
     Services
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+    Requirements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-script">
+    Config Script
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#further-config">
+    Further Config
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -424,23 +439,49 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">¶</a></h1>
+<h1 id="win-workstation">Win-Workstation<a class="headerlink" href="#win-workstation" title="Permanent link">¶</a></h1>
 <h2 id="services">Services<a class="headerlink" href="#services" title="Permanent link">¶</a></h2>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
+<h2 id="config-script">Config Script<a class="headerlink" href="#config-script" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+
+<span class="nv">VM_ID</span><span class="o">=</span><span class="m">215</span>
+
+
+<span class="c1">##############################</span>
+
+qm create <span class="nv">$VM_ID</span>
+
+qm create <span class="m">104</span> <span class="se">\</span>
+    --cdrom local:iso/debian-10.2.0-amd64-netinst.iso <span class="se">\</span>
+    --name demo <span class="se">\</span>
+    --net0 virtio,bridge<span class="o">=</span>vmbr0 <span class="se">\</span>
+    --virtio0 local:10,format<span class="o">=</span>qcow2 <span class="se">\</span>
+    --arch x86_64 <span class="se">\</span>
+    --bootdisk virtio0 <span class="se">\</span>
+    --ostype l26 <span class="se">\</span>
+    --memory <span class="m">1024</span> <span class="se">\</span>
+    --balloon <span class="m">1</span> <span class="se">\</span>
+    --onboot no <span class="se">\</span>
+    --sockets <span class="m">1</span>
+</code></pre></div>
+<h2 id="further-config">Further Config<a class="headerlink" href="#further-config" title="Permanent link">¶</a></h2>
 <ol>
-<li>linuxserver/homeassistant</li>
-<li>linuxserver/jellyfin</li>
-<li>linuxserver/nano-wallet</li>
-<li>linuxserver/netbootxyz</li>
-<li>linuxserver/qbittorrent</li>
-<li>linuxserver/wikijs</li>
-<li>linuxserver/tautulli</li>
-<li>gotson/komga</li>
+<li>Install virt-io drivers</li>
+<li>Install scoop</li>
 </ol>
+<div class="highlight"><pre><span></span><code>iwr -useb get.scoop.sh <span class="p">|</span> iex
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+scoop install git
+scoop bucket add extras
+scoop install python vscode pyenv
+</code></pre></div>
 <hr/>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 24, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 25, 2021</span>
 </small>
 </div>
 <script async="" crossorigin="anonymous" issue-term="title" label="💬comment" repo="sidkang/wiki" src="https://utteranc.es/client.js" theme="github-light">
@@ -455,7 +496,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 204-Plex" class="md-footer__link md-footer__link--prev" href="../204-plex/" rel="prev">
+<a aria-label="Previous: Docker" class="md-footer__link md-footer__link--prev" href="../210-docker-server/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -464,17 +505,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              204-Plex
+              Docker
             </div>
 </div>
 </a>
-<a aria-label="Next: Win-Workstation" class="md-footer__link md-footer__link--next" href="../215-work/" rel="next">
+<a aria-label="Next: Basic Setup" class="md-footer__link md-footer__link--next" href="../../storage/basic/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Win-Workstation
+              Basic Setup
             </div>
 </div>
 <div class="md-footer__button md-icon">
