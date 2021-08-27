@@ -22,7 +22,6 @@ $wd.Selection.PasteSpecial($default, $default, $default, $default, 9, $default, 
 [Replace 03](https://stackoverflow.com/questions/1045628/can-i-use-win32-com-to-replace-text-inside-a-word-document)
 [Replace 04](https://github.com/MrFiona/python_learning/blob/37f09f478e921f875c63296694fbd030e3e4d4c5/python_program/Tkinter/auto_doc_generate.py)
 
-
 ## Line Break in Word
 
 "^p\n"
