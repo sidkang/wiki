@@ -453,8 +453,8 @@
 
 <span class="c1">####################### VARIABLES</span>
 
-<span class="nv">LXC_TEMPLATE</span><span class="o">=</span>debian-10-standard_10.7-1_amd64.tar.gz
-<span class="nv">LXC_OS_TYPE</span><span class="o">=</span>debian
+<span class="nv">LXC_TEMPLATE</span><span class="o">=</span>ubuntu-21.04-standard_21.04-1_amd64.tar.gz
+<span class="nv">LXC_OS_TYPE</span><span class="o">=</span>ubuntu
 <span class="nv">LXC_HOSTNAME</span><span class="o">=</span>bt
 <span class="nv">LXC_ID</span><span class="o">=</span><span class="m">203</span>
 <span class="nv">LXC_CPU_CORE</span><span class="o">=</span><span class="m">4</span>
@@ -467,7 +467,7 @@
 
 <span class="c1">#######################</span>
 
-pct create <span class="nv">$LXC_ID</span> store-image:vztmpl/debian-10-standard_10.7-1_amd64.tar.gz <span class="se">\</span>
+pct create <span class="nv">$LXC_ID</span> store-image:vztmpl/<span class="nv">$LXC_TEMPLATE</span> <span class="se">\</span>
     --unprivileged <span class="m">1</span> <span class="se">\</span>
     --hostname <span class="nv">$LXC_HOSTNAME</span> <span class="se">\</span>
     --ssh-public-keys ~/.ssh/id_rsa_new.pub <span class="se">\</span>
@@ -499,13 +499,10 @@ pct <span class="nb">set</span> <span class="nv">$LXC_ID</span> -mp1 /store/soft
 
 pct start <span class="nv">$LXC_ID</span>
 pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- bash -c <span class="s2">"echo 'Preconfig' &amp;&amp;\</span>
-<span class="s2">    sed -i 's|http://ftp.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian/|g' /etc/apt/sources.list &amp;&amp;\</span>
-<span class="s2">    sed -i 's|http://security.debian.org|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g' /etc/apt/sources.list &amp;&amp;\</span>
+<span class="s2">    sed -i 's|http://archive.ubuntu.com/ubuntu|https://mirrors.tuna.tsinghua.edu.cn/ubuntu/|g' /etc/apt/sources.list &amp;&amp;\</span>
 <span class="s2">    apt update -y &amp;&amp;\</span>
 <span class="s2">    apt upgrade -y --no-install-recommends &amp;&amp;\</span>
-<span class="s2">    apt install -y sudo curl git &amp;&amp;\</span>
-<span class="s2">    rm -rf /etc/localtime &amp;&amp;\</span>
-<span class="s2">    ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp;\</span>
+<span class="s2">    apt install -y sudo curl git gnupg2 &amp;&amp;\</span>
 <span class="s2">    echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/environment &gt; /dev/null &amp;&amp;\</span>
 <span class="s2">    echo 'en_US.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen &gt; /dev/null &amp;&amp;\</span>
 <span class="s2">    echo 'LANG=en_US.UTF-8' | sudo tee /etc/locale.conf &gt; /dev/null &amp;&amp;\</span>
@@ -550,8 +547,6 @@ pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- mkdir -p /ho
 pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- systemctl daemon-reload
 pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- systemctl <span class="nb">enable</span> qbittorrent.service
 pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- systemctl start qbittorrent.service
-pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sysctl -w net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
-pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sysctl -p
 
 <span class="c1">####################### Cleanup</span>
 

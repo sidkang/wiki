@@ -2,8 +2,8 @@
 
 ####################### VARIABLES
 
-LXC_TEMPLATE=debian-10-standard_10.7-1_amd64.tar.gz
-LXC_OS_TYPE=debian
+LXC_TEMPLATE=ubuntu-21.04-standard_21.04-1_amd64.tar.gz
+LXC_OS_TYPE=ubuntu
 LXC_HOSTNAME=bt
 LXC_ID=203
 LXC_CPU_CORE=4
@@ -16,7 +16,7 @@ PROXY_DNS=198.18.0.2
 
 #######################
 
-pct create $LXC_ID store-image:vztmpl/debian-10-standard_10.7-1_amd64.tar.gz \
+pct create $LXC_ID store-image:vztmpl/$LXC_TEMPLATE \
     --unprivileged 1 \
     --hostname $LXC_HOSTNAME \
     --ssh-public-keys ~/.ssh/id_rsa_new.pub \
@@ -48,13 +48,10 @@ lxc.idmap = g 1804 101804 63732
 
 pct start $LXC_ID
 pct exec $LXC_ID -- bash -c "echo 'Preconfig' &&\
-    sed -i 's|http://ftp.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian/|g' /etc/apt/sources.list &&\
-    sed -i 's|http://security.debian.org|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g' /etc/apt/sources.list &&\
+    sed -i 's|http://archive.ubuntu.com/ubuntu|https://mirrors.tuna.tsinghua.edu.cn/ubuntu/|g' /etc/apt/sources.list &&\
     apt update -y &&\
     apt upgrade -y --no-install-recommends &&\
-    apt install -y sudo curl git &&\
-    rm -rf /etc/localtime &&\
-    ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&\
+    apt install -y sudo curl git gnupg2 &&\
     echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/environment > /dev/null &&\
     echo 'en_US.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen > /dev/null &&\
     echo 'LANG=en_US.UTF-8' | sudo tee /etc/locale.conf > /dev/null &&\
@@ -99,8 +96,6 @@ pct exec $LXC_ID -- mkdir -p /home/media/.config/qBittorrent/
 pct exec $LXC_ID -- systemctl daemon-reload
 pct exec $LXC_ID -- systemctl enable qbittorrent.service
 pct exec $LXC_ID -- systemctl start qbittorrent.service
-pct exec $LXC_ID -- sysctl -w net.ipv4.ip_forward=1
-pct exec $LXC_ID -- sysctl -p
 
 ####################### Cleanup
 
