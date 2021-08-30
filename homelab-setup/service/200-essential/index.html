@@ -588,7 +588,9 @@ pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo --login
 
 pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo -u thunder bash -c <span class="s1">'~/.acme.sh/acme.sh --home /mnt/acme --upgrade --auto-upgrade'</span>
 pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo -u thunder bash -c <span class="s1">'~/.acme.sh/acme.sh --home /mnt/acme --issue --dns dns_cf -d "*.$DOMAIN"'</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo -u thunder bash -c <span class="s1">'~/.acme.sh/acme.sh --home /mnt/acme --issue --dns dns_cf -d "plex.$DOMAIN"'</span>
 pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo -u thunder bash -c <span class="s1">'~/.acme.sh/acme.sh --home /mnt/acme --toPkcs -d "*.$DOMAIN" --password pkcs_password'</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sudo -u thunder bash -c <span class="s1">'~/.acme.sh/acme.sh --home /mnt/acme --toPkcs -d "plex.$DOMAIN" --password pkcs_password'</span>
 
 <span class="c1">####################### Cleanup</span>
 

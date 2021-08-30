@@ -107,7 +107,9 @@ pct exec $LXC_ID -- sudo --login -u thunder bash -ilc "cd ~ &&\
 
 pct exec $LXC_ID -- sudo -u thunder bash -c '~/.acme.sh/acme.sh --home /mnt/acme --upgrade --auto-upgrade'
 pct exec $LXC_ID -- sudo -u thunder bash -c '~/.acme.sh/acme.sh --home /mnt/acme --issue --dns dns_cf -d "*.$DOMAIN"'
+pct exec $LXC_ID -- sudo -u thunder bash -c '~/.acme.sh/acme.sh --home /mnt/acme --issue --dns dns_cf -d "plex.$DOMAIN"'
 pct exec $LXC_ID -- sudo -u thunder bash -c '~/.acme.sh/acme.sh --home /mnt/acme --toPkcs -d "*.$DOMAIN" --password pkcs_password'
+pct exec $LXC_ID -- sudo -u thunder bash -c '~/.acme.sh/acme.sh --home /mnt/acme --toPkcs -d "plex.$DOMAIN" --password pkcs_password'
 
 ####################### Cleanup
 

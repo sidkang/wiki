@@ -556,6 +556,8 @@ zfs create store/software/config
 zfs <span class="nb">set</span> <span class="nv">atime</span><span class="o">=</span>on <span class="nv">recordsize</span><span class="o">=</span>16K store/software/config
 zfs create store/software/developer
 zfs <span class="nb">set</span> <span class="nv">atime</span><span class="o">=</span>on <span class="nv">recordsize</span><span class="o">=</span>16K store/software/developer
+zfs create store/software/docker
+zfs <span class="nb">set</span> <span class="nv">atime</span><span class="o">=</span>on <span class="nv">recordsize</span><span class="o">=</span>64K store/software/docker
 zfs create store/software/sync
 zfs <span class="nb">set</span> <span class="nv">atime</span><span class="o">=</span>on <span class="nv">recordsize</span><span class="o">=</span>16K store/software/sync
 </code></pre></div>
@@ -630,7 +632,7 @@ systemctl restart pveproxy
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 23, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 30, 2021</span>
 </small>
 </div>
 <script async="" crossorigin="anonymous" issue-term="title" label="💬comment" repo="sidkang/wiki" src="https://utteranc.es/client.js" theme="github-light">
