@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://wiki.sidkang.com/homelab-setup/service/203-qbittorrent/" rel="canonical"/>
+<link href="https://wiki.sidkang.com/homelab-setup/service/203-bt/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-7.2.5" name="generator"/>
-<title>203-Qbittorrent - SID's Wiki</title>
+<title>203-BT - SID's Wiki</title>
 <link href="../../../assets/stylesheets/main.be71726b.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <meta content="#4051b5" name="theme-color"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#qb-arch-lxc">
+<a class="md-skip" href="#essential">
           Skip to content
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              203-Qbittorrent
+              203-BT
             
           </span>
 </div>
@@ -234,9 +234,26 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          203-BT
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        203-Qbittorrent
+        203-BT
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-script">
+    Config Script
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../204-plex/">
@@ -413,76 +430,140 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-script">
+    Config Script
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="qb-arch-lxc">QB ARCH LXC<a class="headerlink" href="#qb-arch-lxc" title="Permanent link">¶</a></h1>
-<div class="highlight"><pre><span></span><code>pct create <span class="m">203</span> tank-image:vztmpl/debian-10-standard_10.7-1_amd64.tar.gz <span class="se">\</span>
-    --unprivileged <span class="m">1</span> <span class="sb">`</span><span class="c1"># default value` \</span>
-    --hostname qb <span class="se">\</span>
+<h1 id="essential">Essential<a class="headerlink" href="#essential" title="Permanent link">¶</a></h1>
+<h2 id="config-script">Config Script<a class="headerlink" href="#config-script" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">####################### VARIABLES</span>
+
+<span class="nv">LXC_TEMPLATE</span><span class="o">=</span>debian-10-standard_10.7-1_amd64.tar.gz
+<span class="nv">LXC_OS_TYPE</span><span class="o">=</span>debian
+<span class="nv">LXC_HOSTNAME</span><span class="o">=</span>bt
+<span class="nv">LXC_ID</span><span class="o">=</span><span class="m">203</span>
+<span class="nv">LXC_CPU_CORE</span><span class="o">=</span><span class="m">4</span>
+<span class="nv">LXC_MEMORY</span><span class="o">=</span><span class="m">2048</span>
+<span class="nv">LXC_SWAP</span><span class="o">=</span><span class="m">256</span>
+
+<span class="nv">DOMAIN</span><span class="o">=</span>domain.com
+<span class="nv">PROXY_ID</span><span class="o">=</span><span class="m">240</span>
+<span class="nv">PROXY_DNS</span><span class="o">=</span><span class="m">198</span>.18.0.2
+
+<span class="c1">#######################</span>
+
+pct create <span class="nv">$LXC_ID</span> store-image:vztmpl/debian-10-standard_10.7-1_amd64.tar.gz <span class="se">\</span>
+    --unprivileged <span class="m">1</span> <span class="se">\</span>
+    --hostname <span class="nv">$LXC_HOSTNAME</span> <span class="se">\</span>
     --ssh-public-keys ~/.ssh/id_rsa_new.pub <span class="se">\</span>
-    --rootfs spool-vm:16  <span class="sb">`</span><span class="c1">#16G for the startup disk` \</span>
-    --ostype debian  <span class="sb">`</span><span class="c1">#match with the container system, such as Debian, Ubuntu, Opensuse ...` \</span>
-    --arch amd64  <span class="sb">`</span><span class="c1"># default value` \</span>
-    --cores <span class="m">4</span> <span class="se">\</span>
+    --rootfs spool-vm:16 <span class="se">\</span>
+    --ostype <span class="nv">$LXC_OS_TYPE</span> <span class="se">\</span>
+    --arch amd64 <span class="se">\</span>
+    --cores <span class="nv">$LXC_CPU_CORE</span> <span class="se">\</span>
     --cpulimit <span class="m">0</span> <span class="se">\</span>
     --cpuunits <span class="m">1024</span> <span class="se">\</span>
-    --memory <span class="m">2048</span> <span class="se">\</span>
-    --swap <span class="m">256</span> <span class="se">\</span>
-    <span class="sb">`</span><span class="c1">#for futher convienence, last ip digit same as ct id` \</span>
-    --net0 <span class="nv">name</span><span class="o">=</span>eth0,bridge<span class="o">=</span>vmbr0,firewall<span class="o">=</span><span class="m">0</span>,gw<span class="o">=</span><span class="m">192</span>.168.18.1,ip<span class="o">=</span><span class="m">192</span>.168.18.203/24,type<span class="o">=</span>veth <span class="se">\</span>
-    --mp0 /tank/media,mp<span class="o">=</span>/mnt/media  <span class="sb">`</span><span class="c1">#mount specific folder from host to guest` \</span>
-    --onboot <span class="m">1</span>  <span class="sb">`</span><span class="c1"># boot on create, 1 -&gt; True, 0 -&gt; False` \</span>
+    --memory <span class="nv">$LXC_MEMORY</span> <span class="se">\</span>
+    --swap <span class="nv">$LXC_SWAP</span> <span class="se">\</span>
+    --net0 <span class="nv">name</span><span class="o">=</span>eth0,bridge<span class="o">=</span>vmbr0,firewall<span class="o">=</span><span class="m">0</span>,gw<span class="o">=</span><span class="m">192</span>.168.18.<span class="nv">$PROXY_ID</span>,ip<span class="o">=</span><span class="m">192</span>.168.18.<span class="nv">$LXC_ID</span>/24,type<span class="o">=</span>veth <span class="se">\</span>
+    --nameserver <span class="nv">$PROXY_DNS</span> <span class="se">\</span>
+    --onboot <span class="m">1</span> <span class="se">\</span>
     --startup <span class="nv">order</span><span class="o">=</span><span class="m">1</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> -e <span class="s2">"</span>
+
+pct <span class="nb">set</span> <span class="nv">$LXC_ID</span> -mp0 /store/media,mp<span class="o">=</span>/media
+pct <span class="nb">set</span> <span class="nv">$LXC_ID</span> -mp1 /store/software/config/homelab/cert,mp<span class="o">=</span>/mnt/acme
+<span class="nb">echo</span> -e <span class="s2">"</span>
 <span class="s2">lxc.idmap = u 0 100000 1801</span>
 <span class="s2">lxc.idmap = g 0 100000 1801</span>
 <span class="s2">lxc.idmap = u 1801 1801 3</span>
 <span class="s2">lxc.idmap = g 1801 1801 3</span>
 <span class="s2">lxc.idmap = u 1804 101804 63732</span>
-<span class="s2">lxc.idmap = g 1804 101804 63732"</span> &gt;&gt; /etc/pve/lxc/203.conf
+<span class="s2">lxc.idmap = g 1804 101804 63732</span>
+<span class="s2">"</span> &gt;&gt; /etc/pve/lxc/<span class="nv">$LXC_ID</span>.conf
 
-pct start <span class="m">203</span>
-pct <span class="nb">exec</span> <span class="m">203</span> -- bash -c <span class="s2">"echo 'Job begin.' &amp;&amp;\</span>
+<span class="c1">####################### Boot, upgrade, UID &amp; GID</span>
+
+pct start <span class="nv">$LXC_ID</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- bash -c <span class="s2">"echo 'Preconfig' &amp;&amp;\</span>
 <span class="s2">    sed -i 's|http://ftp.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian/|g' /etc/apt/sources.list &amp;&amp;\</span>
 <span class="s2">    sed -i 's|http://security.debian.org|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g' /etc/apt/sources.list &amp;&amp;\</span>
 <span class="s2">    apt update -y &amp;&amp;\</span>
 <span class="s2">    apt upgrade -y --no-install-recommends &amp;&amp;\</span>
-<span class="s2">    apt install -y sudo curl git qbittorrent-nox &amp;&amp;\</span>
+<span class="s2">    apt install -y sudo curl git &amp;&amp;\</span>
+<span class="s2">    rm -rf /etc/localtime &amp;&amp;\</span>
+<span class="s2">    ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp;\</span>
 <span class="s2">    echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/environment &gt; /dev/null &amp;&amp;\</span>
 <span class="s2">    echo 'en_US.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen &gt; /dev/null &amp;&amp;\</span>
 <span class="s2">    echo 'LANG=en_US.UTF-8' | sudo tee /etc/locale.conf &gt; /dev/null &amp;&amp;\</span>
-<span class="s2">    sudo locale-gen en_US.UTF-8 &amp;&amp;\</span>
+<span class="s2">    sudo locale-gen en_US.UTF-8"</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- bash -c <span class="s2">"echo &amp;&amp;\</span>
 <span class="s2">    groupadd -g 1801 mediagroup &amp;&amp;\</span>
-<span class="s2">    groupadd -g 1802 labgroup &amp;&amp;\</span>
 <span class="s2">    useradd -m -d /home/media -u 1801 -g mediagroup -s /bin/bash media &amp;&amp;\</span>
 <span class="s2">    sudo -u media bash -c 'whoami' &amp;&amp;\</span>
-<span class="s2">    echo 'Job done.'"</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>[Unit]
-Description=qBittorrent Command Line Client
-After=network.target
+<span class="s2">    echo 'Preconfig done.'"</span>
 
-[Service]
-Type=forking
-User=media
-Group=mediagroup
-UMask=007
-ExecStart=/usr/bin/qbittorrent-nox -d --webui-port=8090
-Restart=on-failure
+<span class="c1">####################### Transmission Configuration</span>
 
-[Install]
-WantedBy=multi-user.target
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- bash -c <span class="s2">"echo '' &amp;&amp;\</span>
+<span class="s2">    apt install -y software-properties-common &amp;&amp;\</span>
+<span class="s2">    add-apt-repository ppa:qbittorrent-team/qbittorrent-stable &amp;&amp;\</span>
+<span class="s2">    apt update -y &amp;&amp;\</span>
+<span class="s2">    apt install -y qbittorrent-nox"</span>
+
+
+
+<span class="nv">QB_SYSTEMD_CONFIG</span><span class="o">=</span><span class="k">$(</span>cat <span class="s">&lt;&lt;EOF</span>
+<span class="s">[Unit]</span>
+<span class="s">Description=qBittorrent Daemon Service</span>
+<span class="s">Documentation=man:qbittorrent-nox(1)</span>
+<span class="s">Wants=network-online.target</span>
+<span class="s">After=network-online.target nss-lookup.target</span>
+
+<span class="s">[Service]</span>
+<span class="s"># if you have systemd &gt;= 240, you probably want to use Type=exec instead</span>
+<span class="s">Type=simple</span>
+<span class="s">User=media</span>
+<span class="s">ExecStart=/usr/bin/qbittorrent-nox</span>
+<span class="s">TimeoutStopSec=infinity</span>
+
+<span class="s">[Install]</span>
+<span class="s">WantedBy=multi-user.target</span>
+<span class="s">EOF</span>
+<span class="k">)</span>
+
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- cat -e <span class="nv">$QB_SYSTEMD_CONFIG</span> &gt;&gt; /etc/systemd/system/qbittorrent.service
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- mkdir -p /home/media/.config/qBittorrent/
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- systemctl daemon-reload
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- systemctl <span class="nb">enable</span> qbittorrent.service
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- systemctl start qbittorrent.service
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sysctl -w net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+pct <span class="nb">exec</span> <span class="nv">$LXC_ID</span> -- sysctl -p
+
+<span class="c1">####################### Cleanup</span>
+
+pct <span class="nb">set</span> <span class="nv">$LXC_ID</span> -net0 <span class="nv">name</span><span class="o">=</span>eth0,bridge<span class="o">=</span>vmbr0,firewall<span class="o">=</span><span class="m">0</span>,gw<span class="o">=</span><span class="m">192</span>.168.18.1,ip<span class="o">=</span><span class="m">192</span>.168.18.<span class="nv">$LXC_ID</span>/24,type<span class="o">=</span>veth
+pct <span class="nb">set</span> <span class="nv">$LXC_ID</span> -nameserver <span class="m">192</span>.168.18.1
+pct reboot <span class="nv">$LXC_ID</span>
 </code></pre></div>
 <hr/>
 <div class="md-source-date">
 <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 23, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 30, 2021</span>
 </small>
 </div>
 <script async="" crossorigin="anonymous" issue-term="title" label="💬comment" repo="sidkang/wiki" src="https://utteranc.es/client.js" theme="github-light">
