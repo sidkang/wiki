@@ -1,8 +1,8 @@
-# plex
+# Plex-Media-Server
 
 ## Requirements
 
-1. Cannot use wildcard certificate.
+1. Cannot use wildcard certificate. Certificate Folder is `/mnt/acme/plex.$DOMAIN/plex.$DOMAIN.pfx`
 
 ## Config Script
 
