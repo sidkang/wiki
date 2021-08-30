@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#plex">
+<a class="md-skip" href="#plex-media-server">
           Skip to content
         </a>
 </div>
@@ -457,10 +457,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="plex">plex<a class="headerlink" href="#plex" title="Permanent link">¶</a></h1>
+<h1 id="plex-media-server">Plex-Media-Server<a class="headerlink" href="#plex-media-server" title="Permanent link">¶</a></h1>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
 <ol>
-<li>Cannot use wildcard certificate.</li>
+<li>Cannot use wildcard certificate. Certificate Folder is <code>/mnt/acme/plex.$DOMAIN/plex.$DOMAIN.pfx</code></li>
 </ol>
 <h2 id="config-script">Config Script<a class="headerlink" href="#config-script" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
