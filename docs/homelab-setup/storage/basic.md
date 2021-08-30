@@ -46,6 +46,8 @@ zfs create store/software/config
 zfs set atime=on recordsize=16K store/software/config
 zfs create store/software/developer
 zfs set atime=on recordsize=16K store/software/developer
+zfs create store/software/docker
+zfs set atime=on recordsize=64K store/software/docker
 zfs create store/software/sync
 zfs set atime=on recordsize=16K store/software/sync
 ```
