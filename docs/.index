@@ -1,5 +1,6 @@
 nav:
   - Home: index.md
   - My Homelab Setup: homelab-setup
-  - Python: python
+  - Coding: coding
+  - Computer: computer
   - Workout: workout
