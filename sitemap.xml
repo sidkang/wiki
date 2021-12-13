@@ -2,162 +2,192 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wiki.sidkang.com/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/coding/</loc>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/coding/C%2B%2B/container/</loc>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/coding/C%2B%2B/resource/</loc>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/coding/pandas/main/</loc>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/coding/pywin32/inbox/</loc>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/coding/pywin32/main/</loc>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/computer/linux/commands/</loc>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/computer/linux/readme/</loc>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/incoming/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/networking/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/resource/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/tech-usage/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/welcome/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/overview/new/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/service/200-essential/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/service/201-webdav/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/service/202-syncthing/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/service/203-bt/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/service/204-plex/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/service/210-docker-server/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/service/215-work/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/storage/basic/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/homelab-setup/storage/share-via-zfs/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/mac/cpp-resource/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/mac/inbox/</loc>
-         <lastmod>2021-08-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.sidkang.com/python/pandas/main/</loc>
-         <lastmod>2021-08-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.sidkang.com/python/pywin32/inbox/</loc>
-         <lastmod>2021-08-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.sidkang.com/python/pywin32/main/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/unpublished/piano/piano/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/foods/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/progression/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/routine/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/skill/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/welcome/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.sidkang.com/workout/inbox/loss-fat-and-get-muscle/</loc>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/journey/20210624/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/journey/20210722/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/journey/template/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/technique/handstand/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.sidkang.com/workout/technique/material/</loc>
-         <lastmod>2021-08-30</lastmod>
+         <lastmod>2021-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
