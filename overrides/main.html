@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block disqus %}
+{% if not page.is_homepage and page.meta.comment %}
 <script src="https://utteranc.es/client.js"
         repo="sidkang/wiki"
         issue-term="title"
@@ -9,6 +10,7 @@
         crossorigin="anonymous"
         async>
 </script>
+{% endif %}
 {% endblock %}
 
 

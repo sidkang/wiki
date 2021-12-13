@@ -26,7 +26,6 @@ theme:
 
 extra_css:
   - assets/stylesheets/basic.css
-  - assets/stylesheets/progressbar.css
   - assets/stylesheets/utterances.css
 
 plugins:
@@ -51,7 +50,6 @@ extra:
 
 markdown_extensions:
   - meta
-  - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.critic:  # formatting
@@ -88,8 +86,9 @@ markdown_extensions:
   - pymdownx.progressbar
   - markdown.extensions.meta
   - markdown.extensions.attr_list
+  - pymdownx.b64 # erwer
 
 
 # available_metadata:
-# - hide_footer_nav: true or false
+# - comment: true or false, for comment system
 # - title: title used in navigation
