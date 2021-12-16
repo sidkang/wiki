@@ -21,8 +21,11 @@ theme:
     - navigation.tabs
     # - navigation.sections
     # - navigation.expand
-    # - header.autohide
+    - header.autohide
     - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - content.code.annotate
 
 extra_css:
   - assets/stylesheets/basic.css
