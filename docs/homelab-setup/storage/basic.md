@@ -137,3 +137,16 @@ cp /store/software/config/homelab/cert/\*.domain.com/fullchain.cer /etc/pve/loca
 cp /store/software/config/homelab/cert/\*.domain.com/\*.domain.com.key /etc/pve/local/pveproxy-ssl.key
 systemctl restart pveproxy
 ```
+
+## Enable SMB & NFS Share Service
+
+```bash
+apt install -y samba nfs-kernel-server
+
+### Enable Samba User (thunder is a existing linux user)
+# smbpasswd thunder
+New SMB password:
+Retype new SMB password:
+
+### 
+```

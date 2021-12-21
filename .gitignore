@@ -4,3 +4,4 @@ mkdocs_basic_theme.egg-info/
 site/
 .python-version
 
+.DS_Store

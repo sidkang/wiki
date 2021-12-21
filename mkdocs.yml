@@ -3,11 +3,12 @@ site_url: https://wiki.sidkang.com/
 
 theme:
   name: material
+  logo: assets/logo.png
   custom_dir: overrides
   palette:
     scheme: default
-    primary: indigo
-    accent: indigo
+    primary: deep purple
+    accent: red
   font:
     text: Roboto
     code: Roboto Mono
@@ -31,6 +32,11 @@ extra_css:
   - assets/stylesheets/basic.css
   - assets/stylesheets/utterances.css
 
+extra_javascript:
+  - assets/javascripts/mathjax.js  # mathjax required
+  - https://polyfill.io/v3/polyfill.min.js?features=es6  # mathjax required
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  # mathjax required
+
 plugins:
   - awesome-pages:
       filename: .index
@@ -52,6 +58,8 @@ extra:
   generator: false
 
 markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
   - meta
   - admonition
   - pymdownx.details
@@ -79,6 +87,7 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: ['.', 'docs']
       check_paths: true
+  - def_list  # maybe disable someday
   - pymdownx.tasklist:
       custom_checkbox: true
 
