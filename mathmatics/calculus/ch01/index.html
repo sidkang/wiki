@@ -1,0 +1,1329 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://wiki.sidkang.com/mathmatics/calculus/ch01/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-8.1.3" name="generator"/>
+<title>01. Functions and Models - SID's Wiki</title>
+<link href="../../../assets/stylesheets/main.edf004c2.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<meta content="#7e56c2" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/stylesheets/basic.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/utterances.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="red" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#01-functions-and-models">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="SID's Wiki" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="SID's Wiki">
+<img alt="logo" src="../../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            SID's Wiki
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              01. Functions and Models
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../homelab-setup/welcome/">
+        My Homelab Setup
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../coding/">
+        Coding
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../computer/linux/commands/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../workout/welcome/">
+        Workout
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="./">
+        Mathmatics
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="SID's Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="SID's Wiki">
+<img alt="logo" src="../../../assets/logo.png"/>
+</a>
+    SID's Wiki
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          My Homelab Setup
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="My Homelab Setup" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          My Homelab Setup
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/welcome/">
+        Welcome
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Overview" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/overview/new/">
+        New
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/tech-usage/">
+        Tech Usage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/networking/">
+        Networking
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5">
+          Storage
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Storage" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Storage
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/storage/basic/">
+        Basic Setup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/storage/share-via-zfs/">
+        Share Via ZFS
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_6">
+          Services
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Services" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+          Services
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/service/200-essential/">
+        200-Essential
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/service/201-webdav/">
+        201-Webdav
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/service/202-syncthing/">
+        202-Syncthing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/service/203-bt/">
+        203-BT
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/service/204-plex/">
+        204-Plex
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../homelab-setup/resource/">
+        Resource
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../coding/">Coding</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Coding" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Coding
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+          C++
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="C++" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../coding/C%2B%2B/container/">
+        Sequential Containers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../coding/C%2B%2B/resource/">
+        Learning Resource
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3">
+          Pandas
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Pandas" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+          Pandas
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../coding/pandas/main/">
+        Inbox
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4">
+          Pywin32
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Pywin32" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          Pywin32
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../coding/pywin32/inbox/">
+        Scirpt Inbox
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../coding/pywin32/main/">
+        Pywin32 Snippets
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Computer
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linux" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../computer/linux/commands/">
+        常用命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../computer/linux/readme/">
+        READMD
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Workout
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Workout" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Workout
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/welcome/">
+        Welcome
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/progression/">
+        Progression
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/routine/">
+        Routine
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4">
+          Technique
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Technique" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+          Technique
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/technique/material/">
+        Materials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/technique/handstand/">
+        Handstand Progression
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" id="__nav_5_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_5">
+          My Journey
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="My Journey" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_5">
+<span class="md-nav__icon md-icon"></span>
+          My Journey
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/journey/20210624/">
+        2021/06/24 运动开篇
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/journey/20210722/">
+        2021/07/23 首月总结
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/journey/template/">
+        Template
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/foods/">
+        Food
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" id="__nav_5_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_7">
+          inbox
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="inbox" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_7">
+<span class="md-nav__icon md-icon"></span>
+          inbox
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../workout/inbox/loss-fat-and-get-muscle/">
+        增肌 &amp; 减脂
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          Mathmatics
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Mathmatics" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Mathmatics
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" id="__nav_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1">
+          Calculus
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Calculus" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_1">
+<span class="md-nav__icon md-icon"></span>
+          Calculus
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          01. Functions and Models
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        01. Functions and Models
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-four-ways-to-represent-a-function">
+    1.1 Four ways to Represent a Function
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-four-ways-to-represent-a-function">
+    1.1 Four ways to Represent a Function
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="01-functions-and-models">01. Functions and Models<a class="headerlink" href="#01-functions-and-models" title="Permanent link">¶</a></h1>
+<h2 id="11-four-ways-to-represent-a-function">1.1 Four ways to Represent a Function<a class="headerlink" href="#11-four-ways-to-represent-a-function" title="Permanent link">¶</a></h2>
+<div class="arithmatex">\[
+\operatorname{ker} f=\{g\in G:f(g)=e_{H}\}{\mbox{.}}
+\]</div>
+<p>The homomorphism <span class="arithmatex">\(f\)</span> is injective if and only if its kernel is only the singleton set <span class="arithmatex">\(e_G\)</span>, because otherwise <span class="arithmatex">\(\exists a,b\in G\)</span> with <span class="arithmatex">\(a\neq b\)</span> such that <span class="arithmatex">\(f(a)=f(b)\)</span>.</p>
+<div class="admonition note">
+<p>A function <span class="arithmatex">\(f\)</span> is a rule that assigns to each element <span class="arithmatex">\(x\)</span> in a set <span class="arithmatex">\(D\)</span> exactly one element, called <span class="arithmatex">\(f(x)\)</span>, in a set <span class="arithmatex">\(E\)</span>.</p>
+</div>
+<p align="center"><img alt="sine wave" height="480" src="data:image/png;base64,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Fh0ADvx+cVuYBdYXuzhuYUZEAICqqip07doVmZmZ2LhxI5KSkmRHIiKyKce4WK1oH7Dq1bPvd/M++/RsfdHzj+YWZkTUqCNHjuDYsWMAgOzsbBZAInI5jjECePwgsP79s2fVegdzFI+ILojBYMCAAQPQtWtXLFq0CMHBwdi7dy9CQkJkRyMishnHKIBERC3kySefxI8//oh///0X0dHRGDhwIIKCgvD777/LjkZEZDPcO4yIXMaaNWswe/ZsfP311/Dz8wMAzJ07F//++y8+/fRTyemIiGyHI4BE5JL0ej20Wi10Op21DBIRuQqOABIRERG5GBZAIiIiIhfDAkhERETkYlgAiYiIiFwMCyARERGRi2EBJCIiInIxLIBERERELoYFkIiIiMjFsAASERERuRgWQCIiIiIXwwJIRERE5GJYAImIiIhcDAsgERERkYthASQiIiJyMSyARERERC6GBZCIiIjIxbAAEhEREbkYhRBCyA5BRGRrQgiUlZXB19cXCoVCdhwiIptiASQiIiJyMTwFTERERORiWACJiIiIXAwLIBEREZGLYQEkIiIicjEsgEREREQuhgWQiIiIyMWwABIRERG5GBZAIiIiIhfDAkhERETkYlgAiYiIiFwMCyARERGRi2EBJCIiInIx/w/9hMlt0R/aNAAAAABJRU5ErkJggg==" width="640"/></p>
+<h1 id="macros-plugin-environment">Macros Plugin Environment<a class="headerlink" href="#macros-plugin-environment" title="Permanent link">¶</a></h1>
+<h2 id="general-list">General List<a class="headerlink" href="#general-list" title="Permanent link">¶</a></h2>
+<p>All available variables and filters within the macros plugin:</p>
+<table class="pretty" style="background-color: #F0FFFF; border:1px solid #DCDCDC; padding: 5px">
+<th style="border:1px solid #DCDCDC; padding: 5px">Variable</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Type</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Content</th>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>extra</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>dict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">social = [{'icon': 'fontawesome/brands/telegram', 'link': 'https://t.me/sidkang', 'name': 'SidKang'}], generator = False</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>config</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Config</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">config_file_path = '/home/runner/work/wiki/wiki/mkdocs.yml', site_name = "SID's Wiki", <b>nav</b> [<i>NoneType</i>], <b>pages</b> [<i>NoneType</i>], site_url = 'https://wiki.sidkang.com/', <b>site_description</b> [<i>NoneType</i>], <b>site_author</b> [<i>NoneType</i>], <b>theme</b> [<i>Theme</i>], docs_dir = '/home/runner/work/wiki/wiki/docs', site_dir = '/home/runner/work/wiki/wiki/site', <b>copyright</b> [<i>NoneType</i>], <b>google_analytics</b> [<i>NoneType</i>], <b>dev_addr</b> [<i>Address</i>], use_directory_urls = True, repo_url = '', repo_name = '', edit_uri = '', extra_css = ['assets/stylesheets/basic.css', 'assets/stylesheets/utterances.css'], extra_javascript = ['assets/javascripts/mathjax.js', 'https://polyfill.io/v3/polyfill.min.js?features=es6', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'], extra_templates = [], markdown_extensions = ['toc', 'tables', 'fenced_code', 'pymdownx.arithmatex', 'meta', 'admonition', 'pymdownx.details', 'pymdownx.critic', 'pymdownx.betterem', 'pymdownx.caret', 'pymdownx.mark', 'pymdownx.tilde', 'pymdownx.smartsymbols', 'pymdownx.highlight', 'pymdownx.superfences', 'pymdownx.inlinehilite', 'pymdownx.keys', 'pymdownx.snippets', 'def_list', 'pymdownx.tasklist', 'pymdownx.magiclink', 'pymdownx.saneheaders', 'pymdownx.progressbar', 'markdown.extensions.meta', 'markdown.extensions.attr_list', 'pymdownx.b64'], <b>mdx_configs</b> [<i>dict</i>], strict = False, remote_branch = 'gh-pages', remote_name = 'origin', <b>extra</b> [<i>SubConfig</i>], <b>plugins</b> [<i>PluginCollection</i>]</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>environment</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>dict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">system = 'Linux', system_version = '5.11.0-1022-azure', python_version = '3.9.9', mkdocs_version = '1.2.3', macros_plugin_version = '0.6.3', jinja2_version = '3.0.3'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>plugin</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Config</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">module_name = 'macro', modules = [], include_dir = 'snippets', include_yaml = [], j2_block_start_string = '', j2_block_end_string = '', j2_variable_start_string = '', j2_variable_end_string = '', verbose = False</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>git</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>dict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">status = True, <b>date</b> [<i>datetime</i>], short_commit = '4f3e7ce', commit = '4f3e7ce5a17471d98d12ba5f07bff0f8d442721d', author = 'kang', tag = '', date_ISO = '2021-12-21 20:07:58 +0800', message = 'add math', raw = 'commit 4f3e7ce5a17471d98d12ba5f07bff0f8d442721d\nAuthor: kang <sid@mini.sid.pangmao.xyz>\nDate:   Tue Dec 21 20:07:58 2021 +0800\n\n    add math', root_dir = '/home/runner/work/wiki/wiki'</sid@mini.sid.pangmao.xyz></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>social</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">[{'icon': 'fontawesome/brands/telegram', 'link': 'https://t.me/sidkang', 'name': 'SidKang'}]</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>generator</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>bool</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">False</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>docs_dir_name</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'docs'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>macros</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>SuperDict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>context</b> [<i>function</i>], <b>macros_info</b> [<i>function</i>], <b>now</b> [<i>function</i>], <b>fix_url</b> [<i>function</i>], <b>snippet_full_path</b> [<i>function</i>], <b>embed_plot</b> [<i>function</i>]</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>filters</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>dict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>pretty</b> [<i>function</i>]</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>filters_builtin</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>dict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>abs</b> [<i>builtin_function_or_method</i>], <b>attr</b> [<i>function</i>], <b>batch</b> [<i>function</i>], <b>capitalize</b> [<i>function</i>], <b>center</b> [<i>function</i>], <b>count</b> [<i>builtin_function_or_method</i>], <b>d</b> [<i>function</i>], <b>default</b> [<i>function</i>], <b>dictsort</b> [<i>function</i>], <b>e</b> [<i>builtin_function_or_method</i>], <b>escape</b> [<i>builtin_function_or_method</i>], <b>filesizeformat</b> [<i>function</i>], <b>first</b> [<i>function</i>], <b>float</b> [<i>function</i>], <b>forceescape</b> [<i>function</i>], <b>format</b> [<i>function</i>], <b>groupby</b> [<i>function</i>], <b>indent</b> [<i>function</i>], <b>int</b> [<i>function</i>], <b>join</b> [<i>function</i>], <b>last</b> [<i>function</i>], <b>length</b> [<i>builtin_function_or_method</i>], <b>list</b> [<i>function</i>], <b>lower</b> [<i>function</i>], <b>map</b> [<i>function</i>], <b>min</b> [<i>function</i>], <b>max</b> [<i>function</i>], <b>pprint</b> [<i>function</i>], <b>random</b> [<i>function</i>], <b>reject</b> [<i>function</i>], <b>rejectattr</b> [<i>function</i>], <b>replace</b> [<i>function</i>], <b>reverse</b> [<i>function</i>], <b>round</b> [<i>function</i>], <b>safe</b> [<i>function</i>], <b>select</b> [<i>function</i>], <b>selectattr</b> [<i>function</i>], <b>slice</b> [<i>function</i>], <b>sort</b> [<i>function</i>], <b>string</b> [<i>builtin_function_or_method</i>], <b>striptags</b> [<i>function</i>], <b>sum</b> [<i>function</i>], <b>title</b> [<i>function</i>], <b>trim</b> [<i>function</i>], <b>truncate</b> [<i>function</i>], <b>unique</b> [<i>function</i>], <b>upper</b> [<i>function</i>], <b>urlencode</b> [<i>function</i>], <b>urlize</b> [<i>function</i>], <b>wordcount</b> [<i>function</i>], <b>wordwrap</b> [<i>function</i>], <b>xmlattr</b> [<i>function</i>], <b>tojson</b> [<i>function</i>]</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>navigation</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Navigation</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">Page(title='Home', url='/')<br/>Section(title='My Homelab Setup')<br/>    Page(title='Welcome', url='/homelab-setup/welcome/')<br/>    Section(title='Overview')<br/>        Page(title='New', url='/homelab-setup/overview/new/')<br/>    Page(title='Tech Usage', url='/homelab-setup/tech-usage/')<br/>    Page(title='Networking', url='/homelab-setup/networking/')<br/>    Section(title='Storage')<br/>        Page(title='Basic Setup', url='/homelab-setup/storage/basic/')<br/>        Page(title='Share Via ZFS', url='/homelab-setup/storage/share-via-zfs/')<br/>    Section(title='Services')<br/>        Page(title='200-Essential', url='/homelab-setup/service/200-essential/')<br/>        Page(title='201-Webdav', url='/homelab-setup/service/201-webdav/')<br/>        Page(title='202-Syncthing', url='/homelab-setup/service/202-syncthing/')<br/>        Page(title='203-BT', url='/homelab-setup/service/203-bt/')<br/>        Page(title='204-Plex', url='/homelab-setup/service/204-plex/')<br/>    Page(title='Resource', url='/homelab-setup/resource/')<br/>Section(title='Coding')<br/>    Page(title='INDEX PAGE', url='/coding/')<br/>    Section(title='C++')<br/>        Page(title='Sequential Containers', url='/coding/C%2B%2B/container/')<br/>        Page(title='Learning Resource', url='/coding/C%2B%2B/resource/')<br/>    Section(title='Pandas')<br/>        Page(title='Inbox', url='/coding/pandas/main/')<br/>    Section(title='Pywin32')<br/>        Page(title='Scirpt Inbox', url='/coding/pywin32/inbox/')<br/>        Page(title='Pywin32 Snippets', url='/coding/pywin32/main/')<br/>Section(title='Computer')<br/>    Section(title='Linux')<br/>        Page(title='常用命令', url='/computer/linux/commands/')<br/>        Page(title='READMD', url='/computer/linux/readme/')<br/>Section(title='Workout')<br/>    Page(title='Welcome', url='/workout/welcome/')<br/>    Page(title='Progression', url='/workout/progression/')<br/>    Page(title='Routine', url='/workout/routine/')<br/>    Section(title='Technique')<br/>        Page(title='Materials', url='/workout/technique/material/')<br/>        Page(title=[blank], url='/workout/technique/handstand/')<br/>    Section(title='My Journey')<br/>        Page(title=[blank], url='/workout/journey/20210624/')<br/>        Page(title=[blank], url='/workout/journey/20210722/')<br/>        Page(title=[blank], url='/workout/journey/template/')<br/>    Page(title='Food', url='/workout/foods/')<br/>    Section(title='inbox')<br/>        Page(title=[blank], url='/workout/inbox/loss-fat-and-get-muscle/')<br/>Section(title='Mathmatics')<br/>    Section(title='Calculus')<br/>        Page(title='01. Functions and Models', url='/mathmatics/calculus/ch01/')</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>files</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Files</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><mkdocs.structure.files.files 0x7fa506fed6d0="" at="" object=""></mkdocs.structure.files.files></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>page</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Page</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">Page(title='01. Functions and Models', url='/mathmatics/calculus/ch01/')</td>
+</tr>
+</table>
+<h2 id="config-information">Config Information<a class="headerlink" href="#config-information" title="Permanent link">¶</a></h2>
+<p>Standard MkDocs configuration information. Do not try to modify.</p>
+<p>e.g. <code>{{ config.docs_dir }}</code></p>
+<p>See also the <a href="https://www.MkDocs.org/user-guide/custom-themes/#config">MkDocs documentation on the config object</a>.</p>
+<table class="pretty" style="background-color: #F0FFFF; border:1px solid #DCDCDC; padding: 5px">
+<th style="border:1px solid #DCDCDC; padding: 5px">Variable</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Type</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Content</th>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>config_file_path</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'/home/runner/work/wiki/wiki/mkdocs.yml'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>site_name</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">"SID's Wiki"</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>nav</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>pages</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>site_url</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'https://wiki.sidkang.com/'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>site_description</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>site_author</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>theme</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Theme</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">Theme(name='material', dirs=['/home/runner/work/wiki/wiki/overrides', '/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/material', '/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/mkdocs/templates'], static_templates=['sitemap.xml', '404.html'], locale=Locale('en'), language='en', direction='ltr', features=['search.suggest', 'search.highlight', 'navigation.instant', 'navigation.tabs', 'header.autohide', 'navigation.top', 'navigation.tracking', 'navigation.indexes', 'content.code.annotate'], palette={'scheme': 'default', 'primary': 'deep purple', 'accent': 'red'}, font={'text': 'Roboto', 'code': 'Roboto Mono'}, icon=None, favicon='assets/images/favicon.png', include_search_page=False, search_index_only=True, logo='assets/logo.png')</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>docs_dir</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'/home/runner/work/wiki/wiki/docs'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>site_dir</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'/home/runner/work/wiki/wiki/site'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>copyright</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>google_analytics</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>dev_addr</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Address</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">Address(host='127.0.0.1', port=8000)</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>use_directory_urls</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>bool</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">True</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>repo_url</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">''</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>repo_name</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">''</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>edit_uri</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">''</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>extra_css</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">['assets/stylesheets/basic.css', 'assets/stylesheets/utterances.css']</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>extra_javascript</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">['assets/javascripts/mathjax.js', 'https://polyfill.io/v3/polyfill.min.js?features=es6', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js']</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>extra_templates</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">[]</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>markdown_extensions</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">['toc', 'tables', 'fenced_code', 'pymdownx.arithmatex', 'meta', 'admonition', 'pymdownx.details', 'pymdownx.critic', 'pymdownx.betterem', 'pymdownx.caret', 'pymdownx.mark', 'pymdownx.tilde', 'pymdownx.smartsymbols', 'pymdownx.highlight', 'pymdownx.superfences', 'pymdownx.inlinehilite', 'pymdownx.keys', 'pymdownx.snippets', 'def_list', 'pymdownx.tasklist', 'pymdownx.magiclink', 'pymdownx.saneheaders', 'pymdownx.progressbar', 'markdown.extensions.meta', 'markdown.extensions.attr_list', 'pymdownx.b64']</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>mdx_configs</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>dict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>pymdownx.arithmatex</b> [<i>dict</i>], <b>pymdownx.critic</b> [<i>dict</i>], <b>pymdownx.betterem</b> [<i>dict</i>], <b>toc</b> [<i>dict</i>], <b>pymdownx.highlight</b> [<i>dict</i>], <b>pymdownx.superfences</b> [<i>dict</i>], <b>pymdownx.snippets</b> [<i>dict</i>], <b>pymdownx.tasklist</b> [<i>dict</i>]</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>strict</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>bool</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">False</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>remote_branch</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'gh-pages'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>remote_name</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'origin'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>extra</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>SubConfig</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">{'social': [{'icon': 'fontawesome/brands/telegram', 'link': 'https://t.me/sidkang', 'name': 'SidKang'}], 'generator': False}</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>plugins</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>PluginCollection</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>awesome-pages</b> [<i>AwesomePagesPlugin</i>], <b>git-revision-date-localized</b> [<i>GitRevisionDateLocalizedPlugin</i>], <b>macros</b> [<i>MacrosPlugin</i>], <b>search</b> [<i>SearchPlugin</i>], <b>mermaid2</b> [<i>MarkdownMermaidPlugin</i>]</td>
+</tr>
+</table>
+<h2 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">¶</a></h2>
+<p>These macros have been defined programmatically for this environment
+(module or pluglets). </p>
+<table class="pretty" style="background-color: #F0FFFF; border:1px solid #DCDCDC; padding: 5px">
+<th style="border:1px solid #DCDCDC; padding: 5px">Variable</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Type</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Content</th>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>{'context': <function define_env.<locals="">.context at 0x7fa5064dd790&gt;, 'macros_info': <function define_env.<locals="">.macros_info at 0x7fa5064dd550&gt;, 'now': <function define_env.<locals="">.now at 0x7fa5064dd820&gt;, 'fix_url': <function 0x7fa50676ad30="" at="" fix_url="">, 'snippet_full_path': <function define_env.<locals="">.snippet_full_path at 0x7fa5064dd8b0&gt;, 'embed_plot': <function define_env.<locals="">.embed_plot at 0x7fa4f7aa90d0&gt;}</function></function></function></function></function></function></b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>SuperDict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">{'context': <function define_env.<locals="">.context at 0x7fa5064dd790&gt;, 'macros_info': <function define_env.<locals="">.macros_info at 0x7fa5064dd550&gt;, 'now': <function define_env.<locals="">.now at 0x7fa5064dd820&gt;, 'fix_url': <function 0x7fa50676ad30="" at="" fix_url="">, 'snippet_full_path': <function define_env.<locals="">.snippet_full_path at 0x7fa5064dd8b0&gt;, 'embed_plot': <function define_env.<locals="">.embed_plot at 0x7fa4f7aa90d0&gt;}</function></function></function></function></function></function></td>
+</tr>
+</table>
+<h2 id="git-information">Git Information<a class="headerlink" href="#git-information" title="Permanent link">¶</a></h2>
+<p>Information available on the last commit and the git repository containing the
+documentation project:</p>
+<p>e.g. <code>{{ git.message }}</code></p>
+<table class="pretty" style="background-color: #F0FFFF; border:1px solid #DCDCDC; padding: 5px">
+<th style="border:1px solid #DCDCDC; padding: 5px">Variable</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Type</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Content</th>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>status</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>bool</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">True</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>date</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>datetime</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">datetime.datetime(2021, 12, 21, 20, 7, 58, tzinfo=tzoffset(None, 28800))</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>short_commit</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'4f3e7ce'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>commit</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'4f3e7ce5a17471d98d12ba5f07bff0f8d442721d'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>author</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'kang'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>tag</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">''</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>date_ISO</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'2021-12-21 20:07:58 +0800'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>message</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'add math'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>raw</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'commit 4f3e7ce5a17471d98d12ba5f07bff0f8d442721d\nAuthor: kang <sid@mini.sid.pangmao.xyz>\nDate:   Tue Dec 21 20:07:58 2021 +0800\n\n    add math'</sid@mini.sid.pangmao.xyz></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>root_dir</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'/home/runner/work/wiki/wiki'</td>
+</tr>
+</table>
+<h2 id="page-attributes">Page Attributes<a class="headerlink" href="#page-attributes" title="Permanent link">¶</a></h2>
+<p>Provided by MkDocs. These attributes change for every page
+(the attributes shown are for this page).</p>
+<p>e.g. <code>{{ page.title }}</code></p>
+<p>See also the <a href="https://www.MkDocs.org/user-guide/custom-themes/#page">MkDocs documentation on the page object</a>.</p>
+<table class="pretty" style="background-color: #F0FFFF; border:1px solid #DCDCDC; padding: 5px">
+<th style="border:1px solid #DCDCDC; padding: 5px">Variable</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Type</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Content</th>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>file</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>File</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>page</b> [<i>Page</i>], src_path = 'mathmatics/calculus/ch01.md', abs_src_path = '/home/runner/work/wiki/wiki/docs/mathmatics/calculus/ch01.md', name = 'ch01', dest_path = 'mathmatics/calculus/ch01/index.html', abs_dest_path = '/home/runner/work/wiki/wiki/site/mathmatics/calculus/ch01/index.html', url = 'mathmatics/calculus/ch01/'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>title</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'01. Functions and Models'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>parent</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Section</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">title = 'Calculus', children = [Page(title='01. Functions and Models', url='/mathmatics/calculus/ch01/')], <b>parent</b> [<i>Section</i>], _Section__active = False, is_section = True, is_page = False, is_link = False</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>children</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>previous_page</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Page</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">Page(title=[blank], url='/workout/inbox/loss-fat-and-get-muscle/')</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>next_page</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>_Page__active</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>bool</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">False</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>is_section</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>bool</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">False</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>is_page</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>bool</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">True</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>is_link</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>bool</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">False</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>update_date</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'2021-12-21'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>canonical_url</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'https://wiki.sidkang.com/mathmatics/calculus/ch01/'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>abs_url</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'/mathmatics/calculus/ch01/'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>edit_url</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>markdown</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'# 01. Functions and Models\n\n## 1.1 Four ways to Represent a Function\n\n$$\n\\operatorname{ker} f=\\{g\\in G:f(g)=e_{H}\\}{\\mbox{.}}\n$$\n\nThe homomorphism $f$ is injective if and only if its kernel is only the singleton set $e_G$, because otherwise $\\exists a,b\\in G$ with $a\\neq b$ such that $f(a)=f(b)$.\n\n!!! note ""\n\n    A function $f$ is a rule that assigns to each element $x$ in a set $D$ exactly one element, called $f(x)$, in a set $E$.\n\n{{ embed_plot(\'ch01-01_plot.py\',alt_text=\'sine wave\') }}\n{ align=center }\n\n{{ macros_info() }}\n'</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>content</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>toc</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">[]</td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>meta</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>dict</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">git_revision_date_localized = '<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2021</span>', git_revision_date_localized_raw_date = 'December 21, 2021', git_revision_date_localized_raw_datetime = 'December 21, 2021 12:09:14', git_revision_date_localized_raw_iso_date = '2021-12-21', git_revision_date_localized_raw_iso_datetime = '2021-12-21 12:09:14', git_revision_date_localized_raw_timeago = '<span class="timeago" datetime="2021-12-21T12:09:14+00:00" locale="en"></span>'</td>
+</tr>
+</table>
+<p>To have all titles of all pages, use:</p>
+<div class="highlight"><pre><span></span><code>{% for page in navigation.pages %}
+- {{ page.title }}
+{% endfor% }
+</code></pre></div>
+<h2 id="plugin-filters">Plugin Filters<a class="headerlink" href="#plugin-filters" title="Permanent link">¶</a></h2>
+<p>These filters are provided as a standard by the macros plugin.</p>
+<table class="pretty" style="background-color: #F0FFFF; border:1px solid #DCDCDC; padding: 5px">
+<th style="border:1px solid #DCDCDC; padding: 5px">Variable</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Type</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Content</th>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>pretty</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>var_list, rows, header, e</i>)<br/> <p><em>Default mkdocs_macro</em> Prettify a dictionary or object          (used for environment documentation, or debugging).</p></td>
+</tr>
+</table>
+<h2 id="builtin-jinja2-filters">Builtin Jinja2 Filters<a class="headerlink" href="#builtin-jinja2-filters" title="Permanent link">¶</a></h2>
+<p>These filters are provided by Jinja2 as a standard.</p>
+<p>See also the <a href="https://jinja.palletsprojects.com/en/2.11.x/templates/#builtin-filters">Jinja2 documentation on builtin filters</a>).</p>
+<table class="pretty" style="background-color: #F0FFFF; border:1px solid #DCDCDC; padding: 5px">
+<th style="border:1px solid #DCDCDC; padding: 5px">Variable</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Type</th>
+<th style="border:1px solid #DCDCDC; padding: 5px">Content</th>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>abs</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>builtin_function_or_method</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><p>Return the absolute value of the argument.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>attr</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>environment, obj, name, value</i>)<br/> <p>Get an attribute of an object.  <code>foo|attr("bar")</code> works like     <code>foo.bar</code> just that always an attribute is returned and items are not     looked up.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>batch</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, linecount, fill_with, tmp, item</i>)<br/> <p>A filter that batches items. It works pretty much like <code>slice</code>     just the other way round. It returns a list of lists with the     given number of items. If you provide a second parameter this     is used to fill up missing items. See this example.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>capitalize</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>s</i>)<br/> <p>Capitalize a value. The first character will be uppercase, all others     lowercase.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>center</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, width</i>)<br/> <p>Centers the value in a field of a given width.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>count</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>builtin_function_or_method</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><p>Return the number of items in a container.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>d</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, default_value, boolean</i>)<br/> <p>If the value is undefined it will return the passed default value,     otherwise the value of the variable.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>default</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, default_value, boolean</i>)<br/> <p>If the value is undefined it will return the passed default value,     otherwise the value of the variable.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>dictsort</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, case_sensitive, by, reverse, sort_func</i>)<br/> <p>Sort a dict and yield (key, value) pairs. Python dicts may not     be in the order you want to display them in, so sort them first.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>e</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>builtin_function_or_method</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><p>Replace the characters <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>'</code>, and <code>"</code> in the string with HTML-safe sequences. Use this if you need to display text that might contain such characters in HTML.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>escape</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>builtin_function_or_method</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><p>Replace the characters <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>'</code>, and <code>"</code> in the string with HTML-safe sequences. Use this if you need to display text that might contain such characters in HTML.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>filesizeformat</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, binary, bytes, base, prefixes, i, prefix, unit</i>)<br/> <p>Format the value like a 'human-readable' file size (i.e. 13 kB,     4.1 MB, 102 Bytes, etc).  Per default decimal prefixes are used (Mega,     Giga, etc.), if the second parameter is set to <code>True</code> the binary     prefixes are used (Mebi, Gibi).</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>first</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Return the first item of a sequence.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>float</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, default</i>)<br/> <p>Convert the value into a floating point number. If the     conversion doesn't work it will return <code>0.0</code>. You can     override this default using the first parameter.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>forceescape</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value</i>)<br/> <p>Enforce HTML escaping.  This will probably double escape variables.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>format</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, args, kwargs</i>)<br/> <p>Apply the given values to a <code>printf-style</code>_ format string, like     <code>string % values</code>.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>groupby</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Group a sequence of objects by an attribute using Python's     :func:<code>itertools.groupby</code>. The attribute can use dot notation for     nested access, like <code>"address.city"</code>. Unlike Python's <code>groupby</code>,     the values are sorted first so only one group is returned for each     unique value.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>indent</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>s, width, first, blank, newline, rv, lines</i>)<br/> <p>Return a copy of the string with each line indented by 4 spaces. The     first line and blank lines are not indented by default.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>int</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, default, base</i>)<br/> <p>Convert the value into an integer. If the     conversion doesn't work it will return <code>0</code>. You can     override this default using the first parameter. You     can also override the default base (10) in the second     parameter, which handles input with prefixes such as     0b, 0o and 0x for bases 2, 8 and 16 respectively.     The base is ignored for decimal numbers and non-string values.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>join</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Return a string which is the concatenation of the strings in the     sequence. The separator between elements is an empty string per     default, you can define it with the optional parameter.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>last</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>environment, seq</i>)<br/> <p>Return the last item of a sequence.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>length</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>builtin_function_or_method</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><p>Return the number of items in a container.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>list</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Convert the value into a list.  If it was a string the returned list     will be a list of characters.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>lower</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>s</i>)<br/> <p>Convert a value to lowercase.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>map</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Applies a filter on a sequence of objects or looks up an attribute.     This is useful when dealing with lists of objects but you are really     only interested in a certain value of it.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>min</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>environment, value, case_sensitive, attribute</i>)<br/> <p>Return the smallest item from the sequence.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>max</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>environment, value, case_sensitive, attribute</i>)<br/> <p>Return the largest item from the sequence.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>pprint</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value</i>)<br/> <p>Pretty print a variable. Useful for debugging.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>random</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>context, seq</i>)<br/> <p>Return a random item from the sequence.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>reject</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Filters a sequence of objects by applying a test to each object,     and rejecting the objects with the test succeeding.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>rejectattr</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Filters a sequence of objects by applying a test to the specified     attribute of each object, and rejecting the objects with the test     succeeding.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>replace</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>eval_ctx, s, old, new, count</i>)<br/> <p>Return a copy of the value with all occurrences of a substring     replaced with a new one. The first argument is the substring     that should be replaced, the second is the replacement string.     If the optional third argument <code>count</code> is given, only the first     <code>count</code> occurrences are replaced.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>reverse</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, rv, e</i>)<br/> <p>Reverse the object or return an iterator that iterates over it the other     way round.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>round</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, precision, method, func</i>)<br/> <p>Round the number to a given precision. The first     parameter specifies the precision (default is <code>0</code>), the     second the rounding method.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>safe</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value</i>)<br/> <p>Mark the value as safe which means that in an environment with automatic     escaping enabled this variable will not be escaped.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>select</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Filters a sequence of objects by applying a test to each object,     and only selecting the objects with the test succeeding.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>selectattr</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Filters a sequence of objects by applying a test to the specified     attribute of each object, and only selecting the objects with the     test succeeding.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>slice</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Slice an iterator and return a list of lists containing     those items. Useful if you want to create a div containing     three ul tags that represent columns.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>sort</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>environment, value, reverse, case_sensitive, attribute, key_func</i>)<br/> <p>Sort an iterable using Python's :func:<code>sorted</code>.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>string</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>builtin_function_or_method</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><p>Convert an object to a string if it isn't already. This preserves a :class:<code>Markup</code> string rather than converting it back to a basic string, so it will still be marked as safe and won't be escaped again.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>striptags</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value</i>)<br/> <p>Strip SGML/XML tags and replace adjacent whitespace by one space.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>sum</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>args, kwargs, b</i>)<br/> <p>Returns the sum of a sequence of numbers plus the value of parameter     'start' (which defaults to 0).  When the sequence is empty it returns     start.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>title</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>s</i>)<br/> <p>Return a titlecased version of the value. I.e. words will start with     uppercase letters, all remaining characters are lowercase.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>trim</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, chars</i>)<br/> <p>Strip leading and trailing characters, by default whitespace.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>truncate</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>env, s, length, killwords, end, leeway, result</i>)<br/> <p>Return a truncated copy of the string. The length is specified     with the first parameter which defaults to <code>255</code>. If the second     parameter is <code>true</code> the filter will cut the text at length. Otherwise     it will discard the last word. If the text was in fact     truncated it will append an ellipsis sign (<code>"..."</code>). If you want a     different ellipsis sign than <code>"..."</code> you can specify it using the     third parameter. Strings that only exceed the length by the tolerance     margin given in the fourth parameter will not be truncated.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>unique</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>environment, value, case_sensitive, attribute, getter, seen, item, key</i>)<br/> <p>Returns a list of unique items from the given iterable.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>upper</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>s</i>)<br/> <p>Convert a value to uppercase.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>urlencode</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>value, items</i>)<br/> <p>Quote data for use in a URL path or query using UTF-8.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>urlize</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>eval_ctx, value, trim_url_limit, nofollow, target, rel, extra_schemes, policies, rel_parts, scheme, rv</i>)<br/> <p>Convert URLs in text into clickable links.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>wordcount</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>s</i>)<br/> <p>Count the words in that string.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>wordwrap</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>environment, s, width, break_long_words, wrapstring, break_on_hyphens</i>)<br/> <p>Wrap a string to the given width. Existing newlines are treated     as paragraphs to be wrapped separately.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>xmlattr</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>eval_ctx, d, autospace, rv</i>)<br/> <p>Create an SGML/XML attribute string based on the items in a dict.     All values that are neither <code>none</code> nor <code>undefined</code> are automatically     escaped.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>tojson</b></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>function</i></td>
+<td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">(<i>eval_ctx, value, indent, policies, dumps, kwargs</i>)<br/> <p>Serialize an object to a string of JSON, and mark it safe to     render in HTML. This filter is only for use in HTML documents.</p></td>
+</tr>
+</table>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2021</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 增肌 &amp; 减脂" class="md-footer__link md-footer__link--prev" href="../../../workout/inbox/loss-fat-and-get-muscle/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              增肌 &amp; 减脂
+            </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://t.me/sidkang" rel="noopener" target="_blank" title="SidKang">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "search.highlight", "navigation.instant", "navigation.tabs", "header.autohide", "navigation.top", "navigation.tracking", "navigation.indexes", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+<script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+<script src="../../../assets/javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

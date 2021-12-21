@@ -15,7 +15,7 @@ PROXY_DNS=198.18.0.2
 
 #######################
 
-pct create $LXC_ID store-image:vztmpl/debian-10-standard_10.7-1_amd64.tar.gz \
+pct create $LXC_ID store-image:vztmpl/$LXC_TEMPLATE \
     --unprivileged 1 \
     --hostname $LXC_HOSTNAME \
     --ssh-public-keys ~/.ssh/id_rsa_new.pub \
@@ -62,6 +62,7 @@ pct exec $LXC_ID -- bash -c "echo 'Preconfig' &&\
 pct exec $LXC_ID -- bash -c "echo &&\
     groupadd -g 1801 mediagroup &&\
     groupadd -g 1802 labgroup &&\
+    useradd -m -d /home/media -u 1801 -g mediagroup -s /bin/bash media &&\
     useradd -m -d /home/thunder -u 1802 -g labgroup -G mediagroup -s /bin/bash thunder &&\
     sudo -u thunder bash -c 'whoami' &&\
     echo 'Preconfig done.'"
@@ -70,18 +71,6 @@ pct exec $LXC_ID -- bash -c "echo &&\
 
 pct start $LXC_ID
 
-pct exec $LXC_ID -- bash -c "echo 'Preconfig' &&\
-    sed -i 's|http://ftp.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian/|g' /etc/apt/sources.list &&\
-    sed -i 's|http://security.debian.org|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g' /etc/apt/sources.list &&\
-    apt update -y &&\
-    apt upgrade -y --no-install-recommends &&\
-    apt install -y sudo curl git wget &&\
-    rm -rf /etc/localtime &&\
-    ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&\
-    echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/environment > /dev/null &&\
-    echo 'en_US.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen > /dev/null &&\
-    echo 'LANG=en_US.UTF-8' | sudo tee /etc/locale.conf > /dev/null &&\
-    sudo locale-gen en_US.UTF-8"
 
 ####################### Webdav Server
 
