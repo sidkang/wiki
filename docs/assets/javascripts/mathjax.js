@@ -3,7 +3,10 @@ window.MathJax = {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
-    processEnvironments: true
+    processEnvironments: true,
+    // custom
+    loader: {load: ['[tex]/bbox']},
+    tex: {packages: {'[+]': ['bbox']}},
   },
   options: {
     ignoreHtmlClass: ".*|",
