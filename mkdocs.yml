@@ -45,7 +45,7 @@ plugins:
       type: date
   - macros:
       include_dir: snippets
-      module_name: macro
+      module_name: snippets/macro
   - search:
       lang: ja
   - mermaid2
