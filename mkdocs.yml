@@ -22,7 +22,7 @@ theme:
     - navigation.tabs
     # - navigation.sections
     # - navigation.expand
-    - header.autohide
+    # - header.autohide
     - navigation.top
     - navigation.tracking
     - navigation.indexes
@@ -82,6 +82,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.snippets:
