@@ -7,6 +7,9 @@ sympy
 matplotlib
 seaborn
 
+numpy
+matplotlib
+
 mkdocs
 
 mkdocs-material
