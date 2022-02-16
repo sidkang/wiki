@@ -2,7 +2,7 @@ def define_env(env):
     """
     This is the hook for declaring variables, macros and filters (new form)
     """
-
+    
     from base64 import b64encode
     import io
     import warnings
@@ -19,7 +19,7 @@ def define_env(env):
             env.page.file.src_path.rsplit('/', 1)[0],
             x
         ])
-
+    
     @env.macro
     def embed_plot(script_name, alt_text='', width=640, height=480):
 
