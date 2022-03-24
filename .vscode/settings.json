@@ -1,0 +1,7 @@
+{
+    "pasteImage.path": "${currentFileDir}/assets/",
+    "pasteImage.showFilePathConfirmInputBox": true,
+    // "pasteImage.defaultName": "${currentFileName}",
+    "pasteImage.basePath": "${currentFileDir}",
+
+}

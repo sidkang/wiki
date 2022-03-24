@@ -8,11 +8,12 @@ matplotlib
 seaborn
 
 mkdocs
-
 mkdocs-material
 mkdocs-macros-plugin
 mkdocs-awesome-pages-plugin
 mkdocs-git-revision-date-localized-plugin
+
+DBnomics
 
 mkdocs-simple-plugin
 mkdocs-mermaid2-plugin
