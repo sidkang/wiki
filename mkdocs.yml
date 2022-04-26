@@ -3,11 +3,13 @@ site_url: https://wiki.sidkang.com/
 
 theme:
   name: material
-  logo: assets/logo.png
+  icon:
+    logo: material/book-open-variant
+  favicon: assets/icons/book-open-variant.png
   custom_dir: overrides
   palette:
     scheme: default
-    primary: deep purple
+    primary: white
     accent: red
   font:
     text: Noto Sans Simplified Chinese
@@ -116,8 +118,11 @@ markdown_extensions:
 
   - pymdownx.progressbar
   - markdown.extensions.meta
+  - pymdownx.b64
   - markdown.extensions.attr_list
-  - pymdownx.b64 # erwer
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 
 # available_metadata:
